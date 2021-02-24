@@ -65,19 +65,16 @@
       "steps": [
         {
           "id": "20.1",
-          "setup": {
-            "watchers": [
-              "../.bash_history"
-            ],
-            "commits": [
-              "8a52ab30f5710fff48bdc80145d8925c2228007b"
-            ]
-          },
           "content": "Fork repo on github - when you are done, click the `Run` button to run the tests.",
           "hints": [
             "Follow the directions closely",
             "If the tests don't pass, redo those instructions"
-          ]
+          ],
+          "setup": {
+            "commits": [
+              "8a52ab30f5710fff48bdc80145d8925c2228007b"
+            ]
+          }
         }
       ]
     },
