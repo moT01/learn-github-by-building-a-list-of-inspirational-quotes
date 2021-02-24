@@ -6,9 +6,9 @@ config:
       tap: --reporter=mocha-tap-reporter
     setup:
       commands:
-      - cd .freeCodeCamp && npm install
       - sudo cp ~/project/.freeCodeCamp/.bashrc ~
-    directory: freeCodeCamp
+      - cd .freeCodeCamp && npm install
+    directory: .freeCodeCamp
   repo:
     uri: https://github.com/moT01/.learn-github-by-building-a-collaborative-fiction
     branch: v0.1.0
@@ -19,6 +19,18 @@ levels:
   - id: '10'
     steps:
       - id: '10.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '20'
+    steps:
+      - id: '20.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '30'
+    steps:
+      - id: '30.1'
         setup:
           watchers:
             - ../.bash_history

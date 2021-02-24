@@ -12,3 +12,25 @@
 
 - Follow the directions closely
 - If the tests don't pass, redo those instructions
+
+## 20. Fork Repo on GitHub
+
+### 20.1
+
+Fork repo on github - when you are done, click the `Run` button to run the tests.
+
+#### HINTS
+
+- Follow the directions closely
+- If the tests don't pass, redo those instructions
+
+## 30. git clone forked repo
+
+### 30.1
+
+git clone forked repo.
+
+#### HINTS
+
+- Follow the directions closely
+- If the tests don't pass, redo those instructions
