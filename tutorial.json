@@ -5,21 +5,24 @@
     "description": "> Welcome to the GitHub tutorial!"
   },
   "config": {
+    "setup": {
+      "commands": [
+        "sudo cp ~/project/.freeCodeCamp/.bashrc ~",
+        "cd .freeCodeCamp && npm install"
+      ],
+      "commits": [
+        "7eb12875ec0f3aa451877c94626c0eda6006935d"
+      ]
+    },
     "testRunner": {
       "command": "./node_modules/.bin/mocha",
       "args": {
         "tap": "--reporter=mocha-tap-reporter"
       },
-      "setup": {
-        "commands": [
-          "sudo cp ~/project/.freeCodeCamp/.bashrc ~",
-          "cd .freeCodeCamp && npm install"
-        ]
-      },
       "directory": ".freeCodeCamp"
     },
     "repo": {
-      "uri": "https://github.com/moT01/.learn-github-by-building-a-collaborative-fiction",
+      "uri": "https://github.com/moT01/.learn-github-by-building-a-list-of-inspirational-quotes",
       "branch": "v0.1.0"
     },
     "dependencies": [
@@ -27,12 +30,7 @@
         "name": "node",
         "version": ">=10"
       }
-    ],
-    "setup": {
-      "commits": [
-        "7eb12875ec0f3aa451877c94626c0eda6006935d"
-      ]
-    }
+    ]
   },
   "levels": [
     {
