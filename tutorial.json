@@ -12,11 +12,11 @@
       },
       "setup": {
         "commands": [
-          "cd .freeCodeCamp && npm install",
-          "sudo cp ~/project/.freeCodeCamp/.bashrc ~"
+          "sudo cp ~/project/.freeCodeCamp/.bashrc ~",
+          "cd .freeCodeCamp && npm install"
         ]
       },
-      "directory": "freeCodeCamp"
+      "directory": ".freeCodeCamp"
     },
     "repo": {
       "uri": "https://github.com/moT01/.learn-github-by-building-a-collaborative-fiction",
@@ -30,7 +30,7 @@
     ],
     "setup": {
       "commits": [
-        "39d06be08e8edcf0eff42cf0f5ccbc18f67f39c2"
+        "7eb12875ec0f3aa451877c94626c0eda6006935d"
       ]
     }
   },
@@ -47,9 +47,59 @@
             "watchers": [
               "../.bash_history"
             ],
-            "commits": []
+            "commits": [
+              "ae268ac48255266ca34f6679a9e18d6ae1daf96c"
+            ]
           },
           "content": "**THE FIRST THING YOU NEED TO DO IS RESTART THE TERMINAL.** Type `exit` into the terminal below and press enter. After that, open a new one by clicking the \"hamburger\" menu at the top left of the window, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello GitHub` into the terminal and press enter.",
+          "hints": [
+            "Follow the directions closely",
+            "If the tests don't pass, redo those instructions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Fork Repo on GitHub",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "20.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8ef2ffa02473afde22b61e9cade496c681b87135"
+            ]
+          },
+          "content": "Fork repo on github - when you are done, click the `Run` button to run the tests.",
+          "hints": [
+            "Follow the directions closely",
+            "If the tests don't pass, redo those instructions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "git clone forked repo",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "30.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "1d2658a83964f24792a2b1e11d9178398451cd0a"
+            ]
+          },
+          "content": "git clone forked repo.",
           "hints": [
             "Follow the directions closely",
             "If the tests don't pass, redo those instructions"
