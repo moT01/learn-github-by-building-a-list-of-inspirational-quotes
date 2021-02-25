@@ -11,7 +11,7 @@
         "cd .freeCodeCamp && npm install"
       ],
       "commits": [
-        "c2763481eddcac327de3938773358f7360c8992e"
+        "e63ed979508d6612bf0665d54a18e90d32f5d7cb"
       ]
     },
     "testRunner": {
@@ -46,7 +46,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b10dc42cf474d847dc9d06f2a974e2216c13b547"
+              "e202e6859157f98085976c8ceaff07a7f63588e9"
             ]
           },
           "content": "**THE FIRST THING YOU NEED TO DO IS RESTART THE TERMINAL.** Type `exit` into the terminal below and press enter. After that, open a new one by clicking the \"hamburger\" menu at the top left of the window, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello GitHub` into the terminal and press enter.",
@@ -72,7 +72,7 @@
           ],
           "setup": {
             "commits": [
-              "8a52ab30f5710fff48bdc80145d8925c2228007b"
+              "f1ca745d63ec62d27082b510d2835c77ede05352"
             ]
           }
         }
@@ -91,7 +91,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "5ace49a7232c5a563f1605303f9adc2bbcd8692f"
+              "768b1e5b2801a809fbe6ec3dd5a6a74ee0a3aaff"
             ]
           },
           "content": "git clone forked repo.",
