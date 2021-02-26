@@ -11,7 +11,7 @@
         "cd .freeCodeCamp && npm install"
       ],
       "commits": [
-        "e63ed979508d6612bf0665d54a18e90d32f5d7cb"
+        "84fcb306ab0b9dde0edb3d6b8629293be37f61e6"
       ]
     },
     "testRunner": {
@@ -35,7 +35,7 @@
   "levels": [
     {
       "id": "10",
-      "title": "Restart Terminal",
+      "title": "Start Terminal",
       "summary": "",
       "content": "",
       "steps": [
@@ -46,13 +46,13 @@
               "../.bash_history"
             ],
             "commits": [
-              "e202e6859157f98085976c8ceaff07a7f63588e9"
+              "5ee4f98abae979872a504c1105b591f15c7827af"
             ]
           },
-          "content": "**THE FIRST THING YOU NEED TO DO IS RESTART THE TERMINAL.** Type `exit` into the terminal below and press enter. After that, open a new one by clicking the \"hamburger\" menu at the top left of the window, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello GitHub` into the terminal and press enter.",
+          "content": "**The first thing you need to do it start the terminal.** Open a new one by clicking the \"hamburger\" menu at the top left of the window, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello GitHub` into the terminal and press enter.",
           "hints": [
-            "Follow the directions closely",
-            "If the tests don't pass, redo those instructions"
+            "hint",
+            "If the tests automatically run, trash the terminal with the \"trash can\" icon at the top right of the terminal and redo those instructions"
           ]
         }
       ]
@@ -65,14 +65,13 @@
       "steps": [
         {
           "id": "20.1",
-          "content": "Fork repo on github - when you are done, click the `Run` button to run the tests.",
+          "content": "GitHub is a place you can host your Git repositories. Open another tab in your browser window and go to the repository at https://github.com/mot03/inspirational_quotes. At the top right of the page, there's a `fork` button. Click it and fork it to your account. It must be the GitHub account you used to log in here. When you are done, click the `Run` button to run the tests. Keep this webpage open for the next step.",
           "hints": [
-            "Follow the directions closely",
-            "If the tests don't pass, redo those instructions"
+            "hint"
           ],
           "setup": {
             "commits": [
-              "f1ca745d63ec62d27082b510d2835c77ede05352"
+              "33efabe1d507ed1623feaced5f66562e44b19d74"
             ]
           }
         }
@@ -91,14 +90,684 @@
               "../.bash_history"
             ],
             "commits": [
-              "768b1e5b2801a809fbe6ec3dd5a6a74ee0a3aaff"
+              "bde2214390ccd693d48413cf7ddc4884219c1593"
             ]
           },
-          "content": "git clone forked repo.",
+          "content": "Now there is two copies of the repo you just forked. One on your account, and one on the freeCodeCamp account. Next, you want to clone it to this machine. On the webpage of your new repo, there should be a green button that says `Code`. Click it and copy the URL in the dropdown menu it opens. This is your cloning URL. Clone your repo to this machine by entering `git clone <URL>` in the terminal. Make sure you are in the `project` folder first.",
           "hints": [
-            "Follow the directions closely",
-            "If the tests don't pass, redo those instructions"
+            "The webpage with the green button is `https://github.com/<your-username>/inspirational_quotes`",
+            "The clone URL is `https://github.com/<your-username>/inspirational_quotes.git`",
+            "Type `git clone https://github.com/<your-username>/inspirational_quotes.git` in the terminal to clone the repo"
           ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "title": "ls to view the repo",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "40.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "3dda647994718606e60a930c2fc1c65916ca38d8"
+            ]
+          },
+          "content": "The output shows that it cloned the repo. Use the list command to see what's here.",
+          "hints": [
+            "It's the `ls` command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "title": "cd inspirational_quotes",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "50.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "c0f71c1d4d93a6e6952c5180a512fbd0e545613f"
+            ]
+          },
+          "content": "Change into your new repo folder.",
+          "hints": [
+            "Use the \"change directory\" command",
+            "It's the `cd` command",
+            "Add the folder to change into after the command",
+            "Enter `cd inspirational_quotes` into the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "title": "git status",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "60.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "cbc4032c6b6a1fd6dc56d439593a1e2c9d9dc268"
+            ]
+          },
+          "content": "You are now in the repo. View the status of it.",
+          "hints": [
+            "Use the \"git status\" command in your repo",
+            "Type `git status` in the terminal from your repo folder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "title": "git branch",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "70.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "f9ac7570c017bdddc12d9c21fdb53775081142d0"
+            ]
+          },
+          "content": "git branch",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "title": "git branch -a",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "80.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "1be3047f77128845d67e2a4a0736001324094607"
+            ]
+          },
+          "content": "git branch -a",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "90",
+      "title": "git remote",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "90.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "fd0b93b473970c41592bdff986d80573d2aa3211"
+            ]
+          },
+          "content": "You can see some remote branches there. git remote - this `origin` remote was set automically from the repo you cloned",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "title": "git remote -v",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "100.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "428cb6159ccd395d2578a9f819a6f0767e49ab4d"
+            ]
+          },
+          "content": "git remote -v",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "110",
+      "title": "git remote add upstream",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "110.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "0fc52a323f4cb6c407070a0b83e874d18457bff5"
+            ]
+          },
+          "content": "git remote add upstream https://github.com/moT01/inspirational_quotes.git https://github.com/freeCodeCamp/inspirational_quotes.git",
+          "hints": [
+            "If you entered the wrong URL, you can update it with `git remote set-url <URL>`"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120",
+      "title": "git remote",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "120.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "7160b642d31a36577284789c2214f8862cbc2b39"
+            ]
+          },
+          "content": "git remote",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "130",
+      "title": "git remote -v",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "130.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "3ccd7ecfdc8e2ae68d5529d1fa0f360f61d9fc05"
+            ]
+          },
+          "content": "git remote -v",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "140",
+      "title": "run all_quotes.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "140.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "0eae6cc6a2323035447ab7ac0046992bb387aa17"
+            ]
+          },
+          "content": "run `./all_quotes.sh` - I may need to make these executable locally?",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "150",
+      "title": "run my_quotes.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "150.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "195d4a515cabc649b5d3d196fd5a3924386d6736"
+            ]
+          },
+          "content": "run `./my_quotes.sh` - output should be \"You have not supplied a username\"",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "160",
+      "title": "cp sample.env .env",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "160.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "9228ff2251a15145b8ce90a50da026ed5d154b3d"
+            ]
+          },
+          "content": "It's trying to find the username from the .env file - cp sample.env .env",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "170",
+      "title": "Add username to .env",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "170.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "204547428a6fbc19af29273abeefc69fb9b03130"
+            ]
+          },
+          "content": "Add your github username to the .env file",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "180",
+      "title": "run my_quotes.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "180.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "d672f05fed924506b236e658c067f53fcae2cfe4"
+            ]
+          },
+          "content": "run my_quotes.sh - \"output should be You have not added any quotes yet\" or something",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "190",
+      "title": "Account setup + git config -l",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "190.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "e24af7f05d202b650d128aa4d753048cd9d74535"
+            ]
+          },
+          "content": "There's a few settings on your github account I need to you set before you can continue. `git config -l`",
+          "hints": [
+            "Hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "200",
+      "title": "git config --global user.email",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "200.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "72be492d345c3b723d2d0a4901d9bb187e81fb25"
+            ]
+          },
+          "content": "`git config --global user.email <email>`",
+          "hints": [
+            "Hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "210",
+      "title": "git config -l",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "210.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "9dd523648b46093ee895da57fa2059f5f74f775d"
+            ]
+          },
+          "content": "`git config -l`",
+          "hints": [
+            "Hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "220",
+      "title": "git checkout -b feat/add-my-first-quote",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "220.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "0c13c7c18717928f99f898f1c660a3af280bbb18"
+            ]
+          },
+          "content": "git checkout -b feat/add-my-first-quote",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "230",
+      "title": "mkdir <username>",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "230.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8b637ac8e66173cafe849020fad294640315ac07"
+            ]
+          },
+          "content": "mkdir <username>",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "240",
+      "title": "touch <username>/my_quotes.json",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "240.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "4a003cc4e7defda77f51dde215c30157c79d5170"
+            ]
+          },
+          "content": "touch <username>/my_quotes.json",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "250",
+      "title": "Add first quote",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "250.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "e2c44e4f9d2303de609e85b17f21601ecb014193"
+            ]
+          },
+          "content": "Make an array in your JSON file with one object in it. The one object should `quote` and `author` keys. Find an inspirational quote you like an put the value in for the quote an author. It can be a quote from you or anyone.",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "260",
+      "title": "git status",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "260.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "2ed234c1b01f884c1d5fe465a7f96b2f61da9f4d"
+            ]
+          },
+          "content": "git status",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "270",
+      "title": "git add .",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "270.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "0f8b7551e50ff8c257e54f61de565c816c0dc22d"
+            ]
+          },
+          "content": "Add your changes to staging",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "280",
+      "title": "git status",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "280.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "ba65915541b8a686420c4ca7d5fd0c099a4768fd"
+            ]
+          },
+          "content": "git status",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "290",
+      "title": "git commit feat: add <username>'s first quote",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "290.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "2299c464b327f196982436e81dd9f0730536a7dc"
+            ]
+          },
+          "content": "commit your changes with: git commit -m \"feat: <username>'s first quote",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "300",
+      "title": "git log -3",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "300.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "097b158d7c833ed61d64b63b937b55e1a5c7e7e5"
+            ]
+          },
+          "content": "`git log -3` View the last four logs",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "310",
+      "title": "git push origin feat/add-my-first-quote",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "310.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "97a8890e163ad58e8eb0bb2b555a610f9b788a6a"
+            ]
+          },
+          "content": "no 2fa, email can't be set to private `git push origin feat/add-my-first-quote`",
+          "hints": [
+            "hint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "320",
+      "title": "Create PR",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "320.1",
+          "content": "Create a PR - back on github, go to your repo if you aren't there -",
+          "hints": [
+            "Hint",
+            "The message might not be there if you waited a while. In that case, click `Pull requests` at the top, then the green `New pull request` button, set the click the `compare across forks` button and set the branch to what is described in the instructions above."
+          ],
+          "setup": {
+            "commits": [
+              "f8fafa68be7706f88b9bf247894980b00d78ad62"
+            ]
+          }
         }
       ]
     }
