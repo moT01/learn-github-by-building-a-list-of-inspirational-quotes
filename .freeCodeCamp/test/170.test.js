@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getFileContents, getGitHubUsername } = require('./utils');
 
 describe('Your ".env" file', () => {
@@ -9,4 +9,4 @@ describe('Your ".env" file', () => {
 
     assert(re.test(dotenvFile));
   });
-});
+});*/
