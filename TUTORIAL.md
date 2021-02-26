@@ -299,11 +299,11 @@ commit your changes with: git commit -m "feat: <username>'s first quote
 
 - hint
 
-## 300. git log -4
+## 300. git log -3
 
 ### 300.1
 
-View the last four logs
+`git log -3` View the last four logs
 
 #### HINTS
 
