@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getLastCommand, getCwd, getGithubUsername } = require('./utils');
 
 describe('You', () => {
@@ -9,4 +9,4 @@ describe('You', () => {
 
     assert(lastCommand[0] === 'git' && lastCommand[1] === 'clone' && lastCommand[2] === `https://github.com/${githubUsername}/inspirational-quotes.git` && cwd === '/home/strove/project');
   });
-});
+});*/
