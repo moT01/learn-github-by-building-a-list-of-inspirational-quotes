@@ -8,6 +8,9 @@
     "setup": {
       "commands": [
         "sudo cp ~/project/.freeCodeCamp/.bashrc ~",
+        "wget https://github.com/cli/cli/releases/download/v1.6.2/gh_1.6.2_linux_amd64.tar.gz",
+        "tar xvf gh_1.6.2_linux_amd64.tar.gz",
+        "sudo cp gh_1.6.2_linux_amd64/bin/gh /usr/local/bin/",
         "cd .freeCodeCamp && npm install"
       ],
       "commits": [
@@ -51,8 +54,7 @@
           },
           "content": "**The first thing you need to do it start the terminal.** Open a new one by clicking the \"hamburger\" menu at the top left of the window, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello GitHub` into the terminal and press enter.",
           "hints": [
-            "hint",
-            "If the tests automatically run, trash the terminal with the \"trash can\" icon at the top right of the terminal and redo those instructions"
+            "If the tests don't automatically run, trash the terminal with the \"trash can\" icon at the top right of the terminal and redo those instructions"
           ]
         }
       ]
@@ -65,9 +67,10 @@
       "steps": [
         {
           "id": "20.1",
-          "content": "GitHub is a place you can host your Git repositories. Open another tab in your browser window and go to the repository at https://github.com/mot03/inspirational_quotes. At the top right of the page, there's a `fork` button. Click it and fork it to your account. It must be the GitHub account you used to log in here. When you are done, click the `Run` button to run the tests. Keep this webpage open for the next step.",
+          "content": "GitHub is a place you can host your Git repositories and contribute to open source projects. Open another tab in your browser window and go to the repository at https://github.com/freeCodeCamp/inspirational_quotes. At the top right of that page, there's a `fork` button. Click it and fork the repo to your account. It must be the GitHub account you used to log in here. When you are done, click the `Run` button to run the tests. You will want to keep this webpage open for the rest of the tutorial.",
           "hints": [
-            "hint"
+            "Follow the instructions closely",
+            "You should have forked the suggested repo to your account"
           ],
           "setup": {
             "commits": [
@@ -93,7 +96,7 @@
               "bde2214390ccd693d48413cf7ddc4884219c1593"
             ]
           },
-          "content": "Now there is two copies of the repo you just forked. One on your account, and one on the freeCodeCamp account. Next, you want to clone it to this machine. On the webpage of your new repo, there should be a green button that says `Code`. Click it and copy the URL in the dropdown menu it opens. This is your cloning URL. Clone your repo to this machine by entering `git clone <URL>` in the terminal. Make sure you are in the `project` folder first.",
+          "content": "There is now a copy of the repo on your account and the freeCodeCamp account. Next, you want to clone it to this machine. On the webpage of your new repo, there should be a green button that says `Code`. Click it and copy the URL in the dropdown menu. This is your cloning URL. Clone your repo to this machine by entering `git clone <URL>` in the terminal. Make sure you are in the `project` folder first.",
           "hints": [
             "The webpage with the green button is `https://github.com/<your-username>/inspirational_quotes`",
             "The clone URL is `https://github.com/<your-username>/inspirational_quotes.git`",
@@ -118,16 +121,18 @@
               "3dda647994718606e60a930c2fc1c65916ca38d8"
             ]
           },
-          "content": "The output shows that it cloned the repo. Use the list command to see what's here.",
+          "content": "The output shows that it cloned the repo. List what's in this folder for me.",
           "hints": [
-            "It's the `ls` command"
+            "It's the `ls` command",
+            "Type `ls` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
           ]
         }
       ]
     },
     {
       "id": "50",
-      "title": "cd inspirational_quotes",
+      "title": "cd inspirational-quotes",
       "summary": "",
       "content": "",
       "steps": [
@@ -141,7 +146,7 @@
               "c0f71c1d4d93a6e6952c5180a512fbd0e545613f"
             ]
           },
-          "content": "Change into your new repo folder.",
+          "content": "It cloned the repo in the `inspirational-quotes` folder. Change into your new repo folder.",
           "hints": [
             "Use the \"change directory\" command",
             "It's the `cd` command",
@@ -191,9 +196,11 @@
               "f9ac7570c017bdddc12d9c21fdb53775081142d0"
             ]
           },
-          "content": "git branch",
+          "content": "It says you are on `main` and that it is up to date with `origin/main`. View the branches.",
           "hints": [
-            "hint"
+            "Use the \"git branch\" command",
+            "Type `git branch` into the terminal and press enter",
+            "Make sure you are in your repo folder"
           ]
         }
       ]
@@ -214,9 +221,10 @@
               "1be3047f77128845d67e2a4a0736001324094607"
             ]
           },
-          "content": "git branch -a",
+          "content": "These are your local branches. When you cloned the repo, some remote branches that link to your fork came with it. View them with `git branch -a`. The `-a` stands for \"all\".",
           "hints": [
-            "hint"
+            "Type `git branch -a` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -237,9 +245,10 @@
               "fd0b93b473970c41592bdff986d80573d2aa3211"
             ]
           },
-          "content": "You can see some remote branches there. git remote - this `origin` remote was set automically from the repo you cloned",
+          "content": "There's a `remote/origin/main` branch, that's the `main` branch of your repo on GitHub. When it said your branch was up-to-date, it meant your local `main` branch has all the same commits as this remote branch. When you cloned the repo, it set up this `origin` remote for you. View your remotes with `git remote`.",
           "hints": [
-            "hint"
+            "Type `git remote` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -260,9 +269,10 @@
               "428cb6159ccd395d2578a9f819a6f0767e49ab4d"
             ]
           },
-          "content": "git remote -v",
+          "content": "There's your one remote, `origin`. View more about it with `git remote -v`. `-v` stands for \"verbose\".",
           "hints": [
-            "hint"
+            "Type `git remote -v` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -283,9 +293,12 @@
               "0fc52a323f4cb6c407070a0b83e874d18457bff5"
             ]
           },
-          "content": "git remote add upstream https://github.com/moT01/inspirational_quotes.git https://github.com/freeCodeCamp/inspirational_quotes.git",
+          "content": "You can see the remote name and the URL for it. You will need another remote that links to the parent repo so you can bring in new changes. Back on GitHub, go to the original `freeCodeCamp/inspirational-quotes` repo, find the green `Code` button again and copy its cloning URL. Then, enter `git remote add upstream <URL>` with the URL to add a remote named `upstream`.",
           "hints": [
-            "If you entered the wrong URL, you can update it with `git remote set-url <URL>`"
+            "The parent repo is located at `https://github.com/freeCodeCamp/inspirational_quotes`",
+            "The URL you want to use is `https://github.com/freeCodeCamp/inspirational_quotes.git`",
+            "Enter `git remote -v` to make sure the remote name and URL is correct",
+            "If you entered the wrong URL, you can update it with `git remote set-url upstream <URL>`"
           ]
         }
       ]
@@ -306,9 +319,11 @@
               "7160b642d31a36577284789c2214f8862cbc2b39"
             ]
           },
-          "content": "git remote",
+          "content": "View your remotes again.",
           "hints": [
-            "hint"
+            "Use the \"git remote\" command",
+            "Don't use any flags with the command",
+            "Type `git remote` in the terminal and press enter"
           ]
         }
       ]
@@ -329,9 +344,11 @@
               "3ccd7ecfdc8e2ae68d5529d1fa0f360f61d9fc05"
             ]
           },
-          "content": "git remote -v",
+          "content": "Now you have two remotes. One to your repo (`origin`), and one to the parent repo (`upstream`). `upstream` is the standard name of remotes for the parent. View the remotes again with the `-v` flag.",
           "hints": [
-            "hint"
+            "Use the `git remote` command with the correct flag",
+            "The flag is `-v`",
+            "Type `git remote -v` in the terminal and press enter"
           ]
         }
       ]
@@ -352,9 +369,10 @@
               "0eae6cc6a2323035447ab7ac0046992bb387aa17"
             ]
           },
-          "content": "run `./all_quotes.sh` - I may need to make these executable locally?",
+          "content": "There's a number of folders which contain inspirational quotes contributed from other people. You will make your own later. Run the `all_quotes.sh` script to see all the quotes people have added.",
           "hints": [
-            "hint"
+            "Type `./all_quotes.sh` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -375,9 +393,11 @@
               "195d4a515cabc649b5d3d196fd5a3924386d6736"
             ]
           },
-          "content": "run `./my_quotes.sh` - output should be \"You have not supplied a username\"",
+          "content": "The other script will show you what quotes you have added. Run it to see what it does.",
           "hints": [
-            "hint"
+            "It's the `my_quotes.sh` file",
+            "Type `./my_quotes.sh` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -398,9 +418,11 @@
               "9228ff2251a15145b8ce90a50da026ed5d154b3d"
             ]
           },
-          "content": "It's trying to find the username from the .env file - cp sample.env .env",
+          "content": "It says there isn't a `.env` file. Fortunately, there's a `sample.env` file for you. Use the terminal to copy the `sample.env` into a file named `.env`.",
           "hints": [
-            "hint"
+            "You can copy a file with `cp file new_name`",
+            "Type `cp sample.env .env` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -421,9 +443,10 @@
               "204547428a6fbc19af29273abeefc69fb9b03130"
             ]
           },
-          "content": "Add your github username to the .env file",
+          "content": "Okay, the `.env` is being ignored so Git won't recognize any changes here. Add your github username to the `.env` file.",
           "hints": [
-            "hint"
+            "Don't use any spaces around the variable, `=`, or value",
+            "Make sure it's the username you used to log in here"
           ]
         }
       ]
@@ -444,9 +467,11 @@
               "d672f05fed924506b236e658c067f53fcae2cfe4"
             ]
           },
-          "content": "run my_quotes.sh - \"output should be You have not added any quotes yet\" or something",
+          "content": "Run the script to view your quotes again.",
           "hints": [
-            "hint"
+            "It's the `my_quotes.sh` file",
+            "Type `./my_quotes.sh` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -467,9 +492,11 @@
               "e24af7f05d202b650d128aa4d753048cd9d74535"
             ]
           },
-          "content": "There's a few settings on your github account I need to you set before you can continue. `git config -l`",
+          "content": "Okay, its almost time to start adding your quotes. First, there's a few settings I need you to check on your GitHub account. Back on GitHub, click your profile icon at the top right of any page and go to the settings page. Click the `account security` tab on the left. Make sure two factor authentication is disabled. This needs to be disabled to push code from here.\n\nNext, you are going to anonymize your email address. Click the `emails` tab on the left. A little ways down, there's a checkbox that says `Keep my email addresses private`. Check that box and copy the anonymized email address right below it. It should look something like `<numbers>+<username>@users.noreply.github.com`. This part is optional, but I would do it just to follow along. \n\nAfter you have done those type `git config -l` in the terminal to see your config. `-l` stands for \"list\".",
           "hints": [
-            "Hint"
+            "The URL for the first setting is `https://github.com/settings/security`",
+            "The URL for the second setting is `https://github.com/settings/emails`",
+            "Type `git config -l` in the terminal and press enter"
           ]
         }
       ]
@@ -490,9 +517,9 @@
               "72be492d345c3b723d2d0a4901d9bb187e81fb25"
             ]
           },
-          "content": "`git config --global user.email <email>`",
+          "content": "Using that anonymized email you copied, type `git config --global user.email <email>` to use it. If you choose not to anonymize your email, type `git skip` in the terminal.",
           "hints": [
-            "Hint"
+            "If you lost the copy of your anonymized email, it can be found at `https://github.com/settings/emails` right below the `Keep my email addresses private` option"
           ]
         }
       ]
@@ -513,9 +540,10 @@
               "9dd523648b46093ee895da57fa2059f5f74f775d"
             ]
           },
-          "content": "`git config -l`",
+          "content": "Now when you make a commit, this email will be attached to it. List your config again with `git config -l` to see your new email.",
           "hints": [
-            "Hint"
+            "Type `git config -l` in the terminal and press enter",
+            "Make sure you are in your repo folder first"
           ]
         }
       ]
@@ -536,9 +564,11 @@
               "0c13c7c18717928f99f898f1c660a3af280bbb18"
             ]
           },
-          "content": "git checkout -b feat/add-my-first-quote",
+          "content": "Time to add your own quote. You don't want to make changes to the `main` branch when working on an open source project. So, create and checkout a new branch named `feat/add-my-first-quote`.",
           "hints": [
-            "hint"
+            "Use the `git checkout` command with the `-b` flag to create and checkout a new branch",
+            "Here's an example: `git checkout -b <branch_name>`",
+            "Type `git checkout -b feat/add-my-first-quote` in the terminal and press enter"
           ]
         }
       ]
@@ -559,9 +589,12 @@
               "8b637ac8e66173cafe849020fad294640315ac07"
             ]
           },
-          "content": "mkdir <username>",
+          "content": "Using the terminal, create a new directory in repo with your username as it's name. Make sure to use the same capitalization.",
           "hints": [
-            "hint"
+            "Use the \"make directory\" command",
+            "It's the `mkdir` command",
+            "Here's an example: `mkdir <directory_name>`",
+            "Enter`mkdir <your_username>` in the terminal with your GitHub username in place of `<your_username>`"
           ]
         }
       ]
@@ -582,9 +615,10 @@
               "4a003cc4e7defda77f51dde215c30157c79d5170"
             ]
           },
-          "content": "touch <username>/my_quotes.json",
+          "content": "From here, use `touch` to create `my_quotes.json` in your new folder.",
           "hints": [
-            "hint"
+            "Here's an example: `touch <path/file_name>`",
+            "Enter `touch <your_username>/my_quotes.json` in the terminal with your GitHub username in place of `<your_username>`"
           ]
         }
       ]
@@ -605,9 +639,10 @@
               "e2c44e4f9d2303de609e85b17f21601ecb014193"
             ]
           },
-          "content": "Make an array in your JSON file with one object in it. The one object should `quote` and `author` keys. Find an inspirational quote you like an put the value in for the quote an author. It can be a quote from you or anyone.",
+          "content": "Open your new JSON file in the editor and add an array to it. In the array, add a single object with two keys, `quote` and `author`. Find an inspirational quote you like an put the value in for the `quote` and `author`. It can be a quote from you or anyone.",
           "hints": [
-            "hint"
+            "View one of the other files to see what it might look like",
+            "Your file should look something like this but with a different quote:\n```json\n[\n  {\n    \"quote\": \"Be the change that you wish to see in the world\",\n    \"author\": \"Mahatma Gandhi\"\n  }\n]\n```"
           ]
         }
       ]
@@ -628,9 +663,10 @@
               "2ed234c1b01f884c1d5fe465a7f96b2f61da9f4d"
             ]
           },
-          "content": "git status",
+          "content": "View your status again.",
           "hints": [
-            "hint"
+            "Use the \"git status\" command in your repo",
+            "Type `git status` in the terminal from your repo folder"
           ]
         }
       ]
@@ -651,9 +687,9 @@
               "0f8b7551e50ff8c257e54f61de565c816c0dc22d"
             ]
           },
-          "content": "Add your changes to staging",
+          "content": "You should only have one your one folder showing as untracked. It doesn't show the file yet. Add your changes to staging with `git add <folder_name>`.",
           "hints": [
-            "hint"
+            "Don't add extra changes"
           ]
         }
       ]
@@ -674,9 +710,10 @@
               "ba65915541b8a686420c4ca7d5fd0c099a4768fd"
             ]
           },
-          "content": "git status",
+          "content": "View the status again.",
           "hints": [
-            "hint"
+            "Use the \"git status\" command in your repo",
+            "Type `git status` in the terminal from your repo folder"
           ]
         }
       ]
@@ -697,9 +734,12 @@
               "2299c464b327f196982436e81dd9f0730536a7dc"
             ]
           },
-          "content": "commit your changes with: git commit -m \"feat: <username>'s first quote",
+          "content": "Commit your changes with the message `feat: add <your_username>'s first quote`.",
           "hints": [
-            "hint"
+            "Here's an example: `git commit -m \"<message>\"`",
+            "Enter `git commit -m \"feat: <your_username>'s first quote\"` in the terminal with your username in place of `<your_username>`",
+            "Enter `git log -1` to see if the message is correct",
+            "If it's wrong, type `git reset HEAD~1` to unstage the changes, then `git add .` to add them back. Then commit them with the correct message"
           ]
         }
       ]
@@ -720,9 +760,12 @@
               "097b158d7c833ed61d64b63b937b55e1a5c7e7e5"
             ]
           },
-          "content": "`git log -3` View the last four logs",
+          "content": "View the last three logs in your repo.",
           "hints": [
-            "hint"
+            "Use the \"git log\" command with the correct argument",
+            "It's the `git log` command",
+            "The argument is `-3`",
+            "Type `git log -3` in the terminal and press enter"
           ]
         }
       ]
