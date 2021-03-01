@@ -8,7 +8,7 @@
     "setup": {
       "commands": [
         "sudo cp ~/project/.freeCodeCamp/.bashrc ~",
-        "wget https://github.com/cli/cli/releases/download/v1.6.2/gh_1.6.2_linux_amd64.tar.gz",
+        "cd .freeCodeCamp && wget https://github.com/cli/cli/releases/download/v1.6.2/gh_1.6.2_linux_amd64.tar.gz",
         "cd .freeCodeCamp && tar xvf gh_1.6.2_linux_amd64.tar.gz",
         "sudo cp .freeCodeCamp/gh_1.6.2_linux_amd64/bin/gh /usr/local/bin/",
         "cd .freeCodeCamp && npm install"
