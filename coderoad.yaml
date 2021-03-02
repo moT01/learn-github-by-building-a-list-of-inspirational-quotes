@@ -1,11 +1,11 @@
-version: '0.1.0'
+version: '0.1.1'
 config:
   setup:
     commands:
     - sudo cp ~/project/.freeCodeCamp/.bashrc ~
-    - cd .freeCodeCamp && wget https://github.com/cli/cli/releases/download/v1.6.2/gh_1.6.2_linux_amd64.tar.gz
-    - cd .freeCodeCamp && tar xvf gh_1.6.2_linux_amd64.tar.gz
-    - sudo cp .freeCodeCamp/gh_1.6.2_linux_amd64/bin/gh /usr/local/bin/
+    - cd ~ && wget https://github.com/cli/cli/releases/download/v1.6.2/gh_1.6.2_linux_amd64.tar.gz
+    - cd ~ && tar xvf gh_1.6.2_linux_amd64.tar.gz
+    - sudo cp ~/gh_1.6.2_linux_amd64/bin/gh /usr/local/bin/
     - cd .freeCodeCamp && npm install
   testRunner:
     command: ./node_modules/.bin/mocha
@@ -14,7 +14,7 @@ config:
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/moT01/.learn-github-by-building-a-list-of-inspirational-quotes
-    branch: v0.1.0
+    branch: v0.1.1
   dependencies:
     - name: node
       version: '>=10'
@@ -28,6 +28,9 @@ levels:
   - id: '20'
     steps:
       - id: '20.1'
+        setup:
+          watchers:
+            - ../.bash_history
   - id: '30'
     steps:
       - id: '30.1'
@@ -205,3 +208,18 @@ levels:
   - id: '320'
     steps:
       - id: '320.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '330'
+    steps:
+      - id: '330.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '340'
+    steps:
+      - id: '340.1'
+        setup:
+          watchers:
+            - ../.bash_history
