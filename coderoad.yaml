@@ -8,7 +8,7 @@ config:
     - sudo cp ~/gh_1.6.2_linux_amd64/bin/gh /usr/local/bin/
     - cd .freeCodeCamp && npm install
   testRunner:
-    command: ./node_modules/.bin/mocha
+    command: npm run programmatic-test
     args:
       tap: --reporter=mocha-tap-reporter
     directory: .freeCodeCamp
